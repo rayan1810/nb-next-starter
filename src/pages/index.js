@@ -18,7 +18,9 @@ import {
 } from "native-base";
 import {theme} from '../theme';
 
-function App() {
+// Start editing here, save and see your changes.
+
+function Root() {
   return (
     <Center
       flex={1}
@@ -70,6 +72,7 @@ function App() {
   );
 }
 
+// Color Switch Component
 function ColorModeSwitch() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
@@ -90,10 +93,10 @@ function ColorModeSwitch() {
   );
 }
 
-export default function () {
+export default function App() {
   return (
     <NativeBaseProvider theme={theme}>
-      <App />
+      <Root />
     </NativeBaseProvider>
   );
 }
