@@ -1,5 +1,7 @@
-import * as React from 'react'
-import Head from 'next/head'
+import * as React from "react";
+import Head from "next/head";
+import { NativeBaseProvider } from "native-base";
+import { theme } from "../theme";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,9 +14,11 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Component {...pageProps} />
+      <NativeBaseProvider theme={theme}>
+        <Component {...pageProps} />
+      </NativeBaseProvider>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
