@@ -14,7 +14,7 @@ import {
   Code,
   Link,
   VStack,
-  Button,
+  Button,AspectRatio
 } from "native-base";
 import {theme} from '../theme';
 
@@ -29,14 +29,16 @@ function Root() {
     >
       <VStack alignItems="center" space="md">
         <HStack alignItems="center" space="2xl">
+          <AspectRatio w={24} ratio={1.66}>
           <Image
             source={{ uri: "images/nextjs-logo.png" }}
-            size={24}
+            alt="NextJS Logo"
             resizeMode="contain"
-          />
+          /></AspectRatio>
           <Text fontSize="4xl">+</Text>
           <Image
             source={{ uri: "images/nativebase-logo.svg" }}
+            alt="NativeBase Logo"
             size={24}
             resizeMode="contain"
           />
@@ -88,6 +90,7 @@ function ColorModeSwitch() {
         right={8}
         onPress={toggleColorMode}
         icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+        accessibilityLabel="Color Mode Switch"
       />
     </Tooltip>
   );
