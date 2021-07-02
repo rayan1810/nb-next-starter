@@ -14,9 +14,10 @@ import {
   Code,
   Link,
   VStack,
-  Button,AspectRatio
+  Button,
+  AspectRatio,
 } from "native-base";
-import {theme} from '../theme';
+import { theme } from "../theme";
 
 // Start editing here, save and see your changes.
 
@@ -30,11 +31,12 @@ function Root() {
       <VStack alignItems="center" space="md">
         <HStack alignItems="center" space="2xl">
           <AspectRatio w={24} ratio={1.66}>
-          <Image
-            source={{ uri: "images/nextjs-logo.png" }}
-            alt="NextJS Logo"
-            resizeMode="contain"
-          /></AspectRatio>
+            <Image
+              source={{ uri: "images/nextjs-logo.png" }}
+              alt="NextJS Logo"
+              resizeMode="contain"
+            />
+          </AspectRatio>
           <Text fontSize="4xl">+</Text>
           <Image
             source={{ uri: "images/nativebase-logo.svg" }}
@@ -68,7 +70,9 @@ function Root() {
       </VStack>
       <ColorModeSwitch />
       <Link mt="6" href="https://docs.nativebase.io" isExternal>
-        <Button variant="outline" colorScheme="coolGray">View Repo</Button>
+        <Button variant="outline" colorScheme="coolGray">
+          View Repo
+        </Button>
       </Link>
     </Center>
   );
